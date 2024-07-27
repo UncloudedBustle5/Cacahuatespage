@@ -1,0 +1,421 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Tahoma, sans-serif;
+    display: block;
+}
+title{
+    display: none;
+}
+script{
+    display: none;
+}
+style{
+    display: none;
+}
+body{
+    background-color: rgb(19, 19, 19);
+}
+#cuerpo{
+    width: 85%;
+    padding: 10px 50px 50px 50px;
+    margin: 20px auto;
+    background-color: rgb(26, 26, 26);
+    border-radius: 20px;
+    min-height: 500px;
+    float: left;
+}
+#encabezado{
+    text-align: center;
+    background-color: #dad603;
+    border-radius: 20px;
+    float: left;
+    width: 100%;
+}
+hgroup{
+    color: rgb(0, 0, 0);
+}
+
+/*Menu*/
+
+/* Estilos básicos */
+#barra {
+    width: 100%;
+    height: 55px;
+    margin-top: 10px;
+    background-color: rgb(41, 40, 40);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    height: 100%;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Animaciones */
+@keyframes taco {
+    from {background-color: rgb(41, 40, 40);}
+    to {background-color: rgb(20, 20, 20);}
+}
+
+.opcion:hover {
+    background-color: rgb(20, 20, 20);
+    animation-name: taco;
+    animation-duration: 2s;
+}
+
+.activo {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 0px;
+    background-color: rgb(20, 20, 20);
+}
+
+.activo2 {
+    background-color: rgb(20, 20, 20);
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none; 
+}
+
+#contacto {
+    color: white;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: rgb(41, 40, 40);
+        position: absolute;
+        top: 55px;
+        left: 0;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .menu li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+
+/* Estilos para la galería */
+div.galeria {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+} 
+div.galeria:hover {
+    border: 1px solid #777;
+} 
+div.galeria img {
+    width: 100%;
+    height: auto;
+} 
+div.descrip {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+/*Articulos*/
+
+#seccion {
+    background-color: rgb(41, 40, 40);
+    width: 70%; 
+    min-height: 400px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: larger;
+    float: left;
+    box-sizing: border-box;
+}
+
+.articulo {
+    color: white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.articulo img {
+    border: 5px groove #dad603;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.articulo h1 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/*Barra lateral*/
+#lateral {
+    background-color: rgb(41, 40, 40);
+    width: calc(30% - 30px);
+    min-height: 400px;
+    float: left;
+    padding: 20px;
+    margin: 10px;
+    margin-right: 0px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+}
+
+#lateral h2 {
+    padding-bottom: 10px;
+}
+
+#lateral form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    
+}
+
+#lateral input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#lateral form input[type="submit"] {
+    width: 100%;
+    background-color: #dad603; 
+    color: black; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#lateral ul {
+    padding-left: 0;
+}
+
+#lateral li {
+    list-style-type: none;
+}
+
+.fuente {
+    margin-bottom: 10px;
+}
+
+#lateral p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #lateral {
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+}
+
+/*Footer*/
+
+#pie{
+    float: left;
+    background-color: rgb(41, 40, 40);
+    text-align: center;
+    color: white;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    #cuerpo {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    #lateral {
+        width: calc(35% - 100px);
+    }
+    #seccion {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #cuerpo {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    #lateral {
+        width: calc(40% - 80px);
+    }
+    #seccion {
+        width: 55%;
+    }
+    nav ul li {
+        padding: 10px 20px;
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cuerpo {
+        width: 100%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    #lateral, #seccion {
+        width: 100%;
+        float: none;
+        margin: 10px auto;
+    }
+    nav ul li {
+        float: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #cuerpo {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+    #lateral, #seccion {
+        width: 100%;
+        float: none;
+        margin: 10px auto;
+    }
+    nav ul li {
+        float: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .articulo img {
+        margin-left: 0;
+        display: block;
+        margin: 10px auto;
+    }
+}
+#Laformula label{
+    color: white;
+}
+/*cambio*/
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444; /* Ajustado al color de borde más oscuro */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: rgb(41, 40, 40); /* Ajustado al color de fondo del formulario */
+    color: white; /* Ajustado al color de texto del formulario */
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #dad603; 
+    color: black; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #ffd700; 
+    color: black; 
+}
+
+.confirmation {
+    display: none;
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.confirmation p {
+    margin: 0;
+    text-align: center;
+}
